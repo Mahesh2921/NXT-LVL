@@ -1,0 +1,154 @@
+/* ======== google fonts ======== */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+/* ======= base style ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* ========= pre-define css ========= */
+body {
+  background: linear-gradient(135deg, #0a0a0a, #333333); /* Gradient background for the body */
+  color: #e7efea; /* Light text color for readability */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f1d906; /* Bright coral */
+  font-weight: 600;
+  margin-bottom: 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+h1::after,
+h2::after,
+h3::after,
+h4::after,
+h5::after,
+h6::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 100%;
+  background: #f1d906;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+h1:hover::after,
+h2:hover::after,
+h3:hover::after,
+h4:hover::after,
+h5:hover::after,
+h6:hover::after {
+  transform: scaleX(1); /* Underline expands on hover */
+}
+
+a {
+  text-decoration: none;
+  color: #e74c3c; /* Bright red */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #c0392b; /* Darker red */
+  transform: scale(1.1); /* Links grow slightly on hover */
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+.section__title {
+  color: #f80a0a; /* Vibrant pink */
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase; /* Uppercase for a strong visual impact */
+}
+
+.section__subtitle {
+  color: #f39c12; /* Bright orange */
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section__description {
+  color: #e7efea; /* Light green */
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.section__description:hover {
+  transform: translateY(-10px); /* Text "floats" up on hover */
+  color: #000000; /* Change to black on hover */
+}
+
+section {
+  padding: 60px 0px;
+  background-color: rgba(10, 10, 10, 0.9); /* Slight transparency for background */
+  border-radius: 10px; /* Rounded corners for sections */
+  margin: 30px 20px; /* Add space around sections */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #8e44ad; /* Fun purple */
+  color: #000000; /* Change to black */
+  border: none;
+  outline: none;
+  border-radius: 50px; /* Fully rounded button */
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: #9b59b6; /* Lighter purple on hover */
+  transform: scale(1.05) translateY(-3px); /* Slight scaling and lifting on hover */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.btn:active {
+  transform: scale(0.95) translateY(2px); /* Button press effect */
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    padding: 40px 20px;
+    margin: 20px 10px;
+  }
+
+  .section__title {
+    font-size: 2rem;
+  }
+
+  .section__subtitle {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 8px 15px;
+  }
+}
